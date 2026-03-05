@@ -1,4 +1,5 @@
 import React from 'react'
+import BirthdayGate from './components/BirthdayGate'
 import Petals from './components/Petals'
 import Hero from './components/Hero'
 import Surprise from './components/Surprise'
@@ -10,14 +11,16 @@ import './styles/App.css'
 
 export default function App() {
   return (
-    <div className="app">
-      <Petals />
-      <Hero />
-      <Surprise />
-      <Message />
-      <Photos />
-      <Countdown />
-      <Footer />
-    </div>
+    <BirthdayGate>
+      <div className="app">
+        <Petals />
+        <Hero />
+        <Surprise />
+        <Message />
+        <Photos />
+        <Countdown />
+        <Footer />
+      </div>
+    </BirthdayGate>
   )
 }
