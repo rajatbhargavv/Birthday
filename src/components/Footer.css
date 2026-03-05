@@ -1,0 +1,29 @@
+.footer {
+  padding: 64px 24px;
+  text-align: center;
+  background: var(--deep);
+  color: #9a7080;
+}
+
+.footer__rose {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.footer__main {
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+.footer__main strong {
+  color: var(--blush);
+  font-weight: 400;
+}
+
+.footer__sub {
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.45;
+  font-style: italic;
+}

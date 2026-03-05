@@ -1,0 +1,64 @@
+.surprise {
+  padding: 110px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--petal) 50%, var(--cream) 100%);
+}
+
+.surprise__heading {
+  color: var(--deep);
+  margin-bottom: 36px;
+}
+
+.surprise__btn {
+  background: transparent;
+  border: 1.5px solid var(--rose);
+  color: var(--rose);
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 18px 52px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+.surprise__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--rose);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.surprise__btn span { position: relative; z-index: 1; }
+.surprise__btn:hover { color: white; }
+.surprise__btn:hover::before { transform: scaleX(1); }
+
+.surprise__reveal {
+  animation: revealPop 0.7s ease forwards;
+}
+@keyframes revealPop {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.surprise__heart {
+  display: block;
+  font-size: 64px;
+  margin-bottom: 22px;
+  animation: heartbeat 0.65s ease-in-out infinite alternate;
+}
+@keyframes heartbeat {
+  from { transform: scale(1); }
+  to   { transform: scale(1.18); }
+}
+
+.surprise__text {
+  font-family: var(--font-script);
+  font-size: clamp(28px, 7vw, 54px);
+  color: var(--rose);
+  line-height: 1.4;
+}

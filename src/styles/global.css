@@ -1,0 +1,88 @@
+/* ── Global Reset & Variables ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rose:    #c8536a;
+  --rose-light: #e07a90;
+  --blush:   #f2c4ce;
+  --gold:    #d4a853;
+  --gold-light: #e8c87a;
+  --cream:   #fdf6f0;
+  --petal:   #f9e4e8;
+  --deep:    #2a1a1f;
+  --deep-mid: #3a2028;
+  --text:    #4a2830;
+  --text-muted: #9a6070;
+
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Cormorant Garamond', serif;
+  --font-script:  'Dancing Script', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--deep);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Shared Utility Classes ── */
+.section-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.45em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 5vw, 38px);
+  letter-spacing: 0.08em;
+  color: var(--deep);
+  margin-bottom: 14px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider__line {
+  display: block;
+  height: 1px;
+  width: 70px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+.divider__line--reverse {
+  transform: scaleX(-1);
+}
+.divider__icon {
+  color: var(--rose);
+  font-size: 18px;
+}
+
+/* ── Scroll reveal base ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
